@@ -1,0 +1,188 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" >
+  <title>Dashboard</title>
+  <style>
+
+    .infoContainer {
+      min-height: 100vh;
+      background-color: #fff;
+      padding: 20px;
+    }
+    
+    .dashboard-header {
+      margin-bottom: 20px;
+    }
+    
+    .mapContainer{
+      background-color: darkred;
+      left: 0;
+      width: 100%;
+      /*so hieght i guess  */
+      height: 60vh;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mapImage {
+      width: 1000px;
+      /*so hieght i guess  */
+      height: 60vh;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .iconImage{
+      width: 50px;
+      height: 50px;
+      
+    }
+
+    .bottom-bar {
+      background-color: darkgrey;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      /*so verticl hieght i guess  */
+      height: 23.33vh;
+    }
+
+    .mapButtons {
+      background-color: brown;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .label {
+      margin-top: 10px;
+    }
+
+
+    .button {
+        position: absolute;
+        /* top: 100px;
+        left: 150px;  */
+    }
+    
+    .button-image {
+        width: auto;
+        height: auto; 
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="infoContainer">
+    <h2 class="dashboard-header">Map Dashboard</h2>
+    <div class="mapContainer">
+      <img src="toiletFinderWebApplication/src/main/webapp/WEB-INF/frontendAssets/croppedmap.png" style= "display: block; margin: 0 auto;" class="mapImage">
+      <a href="#" class="button">
+        <!-- i can barely understand how to absolute values but everytime i do it positioning becomes inverted-->
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image" style="position: absolute; left: 1px; top:1px;">
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image" style="position: absolute; left: 10px; top:10px;">
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 100px; bottom:50px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+        <img src="Assets/images/pixil-frame-0.png" onclick=toiletPressed() alt="Button Image"  class="button-image"style="position: absolute; left: 10px; top:10px;"> 
+      </a>
+        
+    </div>
+  </div>
+
+
+
+  <div class="bottom-bar">
+    <button class="mapButtons" onclick="goToReviews()">Review Section</button>
+    <button class="mapButtons">Select Location</button>
+    <button class="mapButtons" onclick= "goToLogin()" >Logout</button>
+    
+    <div class="label">Select Toilet Name: <br> Average Rating:<br> Something: 
+  </div>
+  
+<script>
+
+  var toiletName = "???";
+  var averageRating = "???";
+  var something  = "???"
+
+  
+  //get string from text
+  document.getElementById("toilet-info").innerHTML = "Select Toilet Name: " + toiletName + "<br> Average Rating:<br> Something:";
+
+  
+  
+  function goToReviews() {
+      window.location.href = "review.jsp";
+    }
+
+  function openAvalibleToiletsPanel() {
+    // window.location.href = "review.html";
+  }
+
+  function goToLogin() {
+      window.location.href = "index.jsp";
+  }
+
+  function toiletPressed() {
+      alert("toilet 1 has been pressed");
+  }
+
+  function toiletPressed2() {
+      alert("toilet 2 has been pressed");
+  }
+
+  function toiletPressed3() {
+      alert("toilet 3 has been pressed");
+  }
+
+  function toiletPressed4() {
+      alert("toilet 4 has been pressed");
+  }
+
+  function toiletPressed5() {
+      alert("toilet 5 has been pressed");
+  }
+
+  function toiletPressed6() {
+      alert("toilet 6 has been pressed");
+  }
+
+  function toiletPressed7() {
+      alert("toilet 7 has been pressed");
+  }
+
+  function toiletPressed8() {
+      alert("toilet 8 has been pressed");
+  }
+
+  function toiletPressed9() {
+      alert("toilet 9 has been pressed");
+  }
+
+  function toiletPressed10() {
+      alert("toilet 10 has been pressed");
+  }
+
+  
+</script>
+
+</body>
+
+</html>

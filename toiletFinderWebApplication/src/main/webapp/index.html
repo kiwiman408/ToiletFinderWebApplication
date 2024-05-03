@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: gold;
+    }
+    .login-container {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .login {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .register {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .guest {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  </head>
+
+  <body>
+
+  <div class="login-container">
+      <h2>Login</h2>
+      <label for="username"><b>Username</b></label>
+      <input type="text" id="username" placeholder="Enter Username" name="username" required>
+      <label for="password"><b>Password</b></label>
+      <input type="password" id="password" placeholder="Enter Password" name="password" required>
+
+      <button class="login" onclick="checkForUser()">Login</button>
+      <button class="register" onclick="addNewUserAdvance()">Register</button>
+      <button class="guest" onclick="advanceAsGuest()">Guest</button>
+  </div>
+
+  <script>
+    function checkForUser() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if (username && password) {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Username or password was not found");
+      }
+    }
+
+    function advanceAsGuest() {
+      alert("A guest cannot leave a review");
+      //use guest account
+      window.location.href = "dashboard.html";
+    }
+
+    function addNewUserAdvance() {
+      alert("A new user will be added");
+      window.location.href = "dashboard.html";
+    }
+  </script>
+
+  </body>
+</html>
